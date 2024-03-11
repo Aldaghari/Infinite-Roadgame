@@ -2,6 +2,6 @@
 
 A simple game where you drive infinitely. 
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](Recording.gif)
 
 Project was made in 30/1/2023.
