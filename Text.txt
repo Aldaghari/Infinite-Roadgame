@@ -1,0 +1,30 @@
+
+sf::Vector2f p1(vecVanishP.x, middleTrack[i].getPoint(0).y + vecVelocity.y);
+            sf::Vector2f p2(vecVanishP.x, vecVanishP.y);
+            lenght = normalize(p1.y, vecVanishP.y, vecWindowSize.y, 4.0f, 120.0f);
+            p2.y = p1.y + lenght;
+            
+            sw::Line l(p1, p2);
+
+            bool addVel = true;
+            if (p1.y > vecWindowSize.y)
+            {
+                p1 = vecVanishP;
+                p2 = p1;
+                p2.y += lenght;
+                sw::Line l(p1, p2);
+                middleTrack[i] = l;
+                addVel = false;
+            }
+            if (addVel)
+            {
+                if (vecVelocity.y > 0)
+                {
+                    middleTrack[i] = l;
+                }
+            }
+            else
+            {
+                middleTrack[i] = l;
+                addVel = true;
+            }
